@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hangman (Kids)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Hangman 🎯</h1>
+      <p class="sub">Guess the word before the hangman is complete.</p>
+    </header>
+
+    <section class="card">
+      <div class="top">
+        <div class="stage">
+          <div class="label">Lives</div>
+          <div id="lives" class="big">6</div>
+          <div id="drawing" class="drawing" aria-label="hangman drawing"></div>
+        </div>
+
+        <div class="info">
+          <div class="label">Category</div>
+          <div id="category" class="pill">—</div>
+
+          <div class="label" style="margin-top:14px;">Word</div>
+          <div id="word" class="word" aria-label="hidden word"></div>
+
+          <div class="label" style="margin-top:14px;">Wrong letters</div>
+          <div id="wrong" class="wrong">—</div>
+        </div>
+      </div>
+
+      <div class="keyboard">
+        <div class="label">Keyboard</div>
+        <div id="keys" class="keys" aria-label="letter keyboard"></div>
+      </div>
+
+      <div class="controls">
+        <button id="newGame" class="btn primary">New Game</button>
+        <button id="hintBtn" class="btn">Hint</button>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <small>Tip: You can also type letters on your keyboard.</small>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
